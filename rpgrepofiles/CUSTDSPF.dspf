@@ -1,0 +1,189 @@
+A                                      DSPSIZ(24 80 *DS3)        
+
+A                                      MNUCNL(CA12)              
+
+A                                                                
+
+A          R MB                        MNUBAR                    
+
+A            MNUFLD         2Y 0B  1  2                          
+
+A                                      MNUBARCHC(1 PULLFILE +    
+
+A                                                '>FILE' )        
+
+A                                      MNUBARCHC(2 PULLEDIT +    
+
+A                                                '>EDIT' )        
+
+A                                      MNUBARSEP((*COLOR WHT) +  
+
+A                                             (*CHAR '.'))        
+
+A          R RECORD                    MNUBARDSP(MB &MNUCHC &PULL)
+
+A                                      CF03(03 'EXIT')            
+
+A                                 10  3'THIS IS THE APPLICATION RECORD'
+
+A                                                                
+
+A            FLD1          10   B 11  3            
+
+A            FLD1          10   B 11  3                          
+
+A            FLD2          10   B 12  3                          
+
+A            MNUCHC         2Y 0H                                
+
+A            PULL           2S 0H                                
+
+A                                                                
+
+A          R PULLFILE                  PULLDOWN                  
+
+A            F1             2Y 0B  1 02SNGCHCFLD(*AUTOENT)        
+
+A                                      CHOICE(1 '>ONE')          
+
+A                                      CHCCTL(1 &C1 MSG0001 XZY133
+
+A                                      CHOICE(2 '>TWO')          
+
+A                                      CHCCTL(2 &C2 &MSG1 &LIB/&MS
+
+A                                                                
+
+A                                      CHOICE(3 '>THREE')        
+
+A                                      CHCCTL(3 &C3)              
+
+A            C1             1Y 0H                                
+
+A            C2             1Y 0H                                
+
+A            C3             1Y 0H                                
+
+A            MSG1           7A  P                                 
+
+A            LIB           10A  P                        
+
+A            MSGF          10A  P                        
+
+A          R PULLEDIT                  PULLDOWN          
+
+A            F1             2Y 0B  1 02SNGCHCFLD        
+
+A                                      CHOICE(1 '>ONE')  
+
+A                                      CHCCTL(1 &C21)    
+
+A                                      CHOICE(2 '>TWO')  
+
+A                                      CHCCTL(2 &C22)    
+
+A                                      CHOICE(3 '>THREE')
+
+A                                      CHCCTL(3 &C23)    
+
+A            C21            1Y 0H                        
+
+A            C22            1Y 0H                        
+
+A            C23            1Y 0H                        
+
+A          R R1                                          
+
+A                                  3 30'YOU PICKED OPTION'
+
+A                                  6 35'11111'            
+
+A                                  7 34'111111'          
+
+A                                  8 33'1111111'          
+
+A                                  9 36'1111'      
+
+A                                 10 36'1111'      
+
+A                                 11 36'1111'      
+
+A                                 12 36'1111'      
+
+A                                 13 36'1111'      
+
+A                                 14 36'1111'      
+
+A                                 15 36'1111'      
+
+A                                 16 36'1111'      
+
+A                                 17 33'1111111111'
+
+A                                 18 33'1111111111'      
+
+A          R R2                                          
+
+A                                  2 30'YOU PICKED OPTION'
+
+A                                  6 34'2222222222'      
+
+A                                  7 33'222222222222'    
+
+A                                  8 32'2222'            
+
+A                                  8 42'2222'            
+
+A                                  9 41'2222'            
+
+A                                 10 40'2222'             
+
+A                                 11 39'2222'          
+
+A                                 12 38'2222'          
+
+A                                 13 37'2222'          
+
+A                                 14 36'2222'          
+
+A                                 18 32'22222222222222'
+
+A                                 19 32'22222222222222'
+
+A                                 17 33'2222'          
+
+A                                 15 35'2222'          
+
+A                                 16 34'2222'          
+
+A          R R3                                          
+
+A                                  2 30'YOU PICKED OPTION'
+
+A                                  7 30'33333333333333333'
+
+A                                 12 30'  333333333333333'
+
+A                                 18 30'33333333333333333'
+
+A                                  6 31'333333333333333'  
+
+A                                 19 31'333333333333333'  
+
+A                                 14 44'3333'            
+
+A                                 15 45'3333'             
+
+A                                 17 44'3333'            
+
+A                                 13 30'  333333333333333'
+
+A                                  8 44'3333'            
+
+A                                 10 45'3333'            
+
+A                                 11 44'3333'            
+
+A                                  9 45'3333'            
+
+A                                 16 45'3333'             
